@@ -1,7 +1,6 @@
 package KataRubenToni.kata;
 
 import KataRubenToni.GameOne.GameColors;
-import KataRubenToni.GameOne.GameOne;
 import KataRubenToni.GameTwo.GameTwo;
 
 import java.util.ArrayList;
