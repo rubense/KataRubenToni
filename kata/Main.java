@@ -1,5 +1,7 @@
 package KataRubenToni.kata;
 
+import KataRubenToni.GameOne.GameColors;
+import KataRubenToni.GameOne.GameOne;
 import KataRubenToni.GameTwo.GameTwo;
 
 import java.util.ArrayList;
@@ -14,7 +16,7 @@ public class Main {
         ArrayList<Game> games = new ArrayList<Game>();
         Scanner sc = new Scanner(System.in);
 
-        //games.add(new GameOne());
+        games.add(new GameColors());
         games.add(new GameTwo());
 
         System.out.println(" ##### Games ##### \n\n");

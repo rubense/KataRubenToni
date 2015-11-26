@@ -1,5 +1,7 @@
 package KataRubenToni.GameOne;
 
+import KataRubenToni.kata.Game;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -7,7 +9,7 @@ import java.util.Scanner;
 /**
  * Created by Ruben on 26/11/2015.
  */
-public class GameColors {
+public class GameColors implements Game {
     private ArrayList<Color> colors;
 
     public GameColors(){
@@ -40,4 +42,13 @@ public class GameColors {
         }
     }
 
+    @Override
+    public void play() {
+        game();
+    }
+
+    @Override
+    public void exit() {
+
+    }
 }
