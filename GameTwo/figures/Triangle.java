@@ -1,6 +1,7 @@
-package GameTwo.figures;
+package KataRubenToni.GameTwo.figures;
 
-import GameTwo.Figure;
+
+import KataRubenToni.GameTwo.Figure;
 
 /**
  * Created by toni on 26/11/15.

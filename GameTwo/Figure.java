@@ -1,4 +1,4 @@
-package GameTwo;
+package KataRubenToni.GameTwo;
 
 /**
  * Created by toni on 26/11/15.

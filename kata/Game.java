@@ -1,4 +1,4 @@
-package kata;
+package KataRubenToni.kata;
 
 /**
  * Created by toni on 26/11/15.

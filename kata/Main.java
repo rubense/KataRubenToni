@@ -1,8 +1,6 @@
-package kata;
+package KataRubenToni.kata;
 
-
-import GameOne.GameOne;
-import GameTwo.GameTwo;
+import KataRubenToni.GameTwo.GameTwo;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -13,17 +11,19 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String args[]) {
-        ArrayList<Game> games = new ArrayList<>();
+        ArrayList<Game> games = new ArrayList<Game>();
         Scanner sc = new Scanner(System.in);
 
         //games.add(new GameOne());
         games.add(new GameTwo());
 
-        System.out.println(" ##### Games ##### ");
+        System.out.println(" ##### Games ##### \n\n");
+
         for (int i = 0; i < games.size(); i++){
-            System.out.println(games.get(i).toString());
+            System.out.println(i + ". " + games.get(i).toString());
         }
 
+        System.out.print("\n\nChoose one: ");
         int number = Integer.parseInt(sc.nextLine());
 
         games.get(number).play();

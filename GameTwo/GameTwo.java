@@ -1,6 +1,7 @@
-package GameTwo;
+package KataRubenToni.GameTwo;
 
-import kata.Game;
+
+import KataRubenToni.kata.Game;
 
 /**
  * Created by toni on 26/11/15.

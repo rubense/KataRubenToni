@@ -1,10 +1,12 @@
-package GameTwo;
+package KataRubenToni.GameTwo;
 
-import GameTwo.figures.Triangle;
-import GameTwo.validator.NumberValidator;
-import GameTwo.validator.ValidatorManager;
+import KataRubenToni.GameTwo.figures.Triangle;
+import KataRubenToni.GameTwo.validator.NumberValidator;
+import KataRubenToni.GameTwo.validator.Validator;
+import KataRubenToni.GameTwo.validator.ValidatorManager;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -34,6 +36,19 @@ public class GameFigures {
 
         System.out.print("What figure would you most like to play? (choose a number): ");
         ValidatorManager.valid(numberValidator, "Please, put a number :D", sc);
+
+        String[][] canvas = figures.get(0).draw();
+        draw(canvas);
+
+    }
+
+    private void draw(String [][] canvas){
+        for (int i = 0; i < canvas.length; i++){
+            for (int j = 0; j < canvas[i].length; j++){
+                System.out.print(canvas[i][j]);
+            }
+            System.out.println();
+        }
     }
 
     @Override

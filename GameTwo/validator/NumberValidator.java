@@ -1,4 +1,4 @@
-package GameTwo.validator;
+package KataRubenToni.GameTwo.validator;
 
 /**
  * Created by toni on 26/11/15.
@@ -32,7 +32,7 @@ public class NumberValidator implements Validator<String, Integer> {
         return this.model;
     }
 
-    class BetterCallFirstIsValidMethodException extends Exception{
+    public class BetterCallFirstIsValidMethodException extends Exception{
         public BetterCallFirstIsValidMethodException() {
         }
 

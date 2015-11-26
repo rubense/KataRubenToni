@@ -1,4 +1,4 @@
-package GameOne;
+package KataRubenToni.GameOne;
 
 /**
  * Created by Ruben on 26/11/2015.

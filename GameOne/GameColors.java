@@ -1,4 +1,4 @@
-package GameOne;
+package KataRubenToni.GameOne;
 
 import java.util.ArrayList;
 import java.util.Random;

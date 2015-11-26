@@ -1,4 +1,4 @@
-package GameTwo.validator;
+package KataRubenToni.GameTwo.validator;
 
 /**
  * Created by toni on 26/11/15.
