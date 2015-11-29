@@ -53,7 +53,7 @@ public class GameColors implements Game {
             e.printStackTrace();
         }
     }
-    
+
 
     @Override
     public void play() {
