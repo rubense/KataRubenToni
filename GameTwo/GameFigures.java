@@ -1,12 +1,11 @@
 package KataRubenToni.GameTwo;
 
 import KataRubenToni.GameTwo.figures.Triangle;
-import KataRubenToni.GameTwo.validator.NumberValidator;
-import KataRubenToni.GameTwo.validator.Validator;
-import KataRubenToni.GameTwo.validator.ValidatorManager;
+import KataRubenToni.validator.BetterCallFirstIsValidMethodException;
+import KataRubenToni.validator.NumberValidator;
+import KataRubenToni.validator.ValidatorManager;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -28,7 +27,7 @@ public class GameFigures {
         this.figures.add(new Triangle(20, 20));
     }
 
-    public void play() throws NumberValidator.BetterCallFirstIsValidMethodException {
+    public void play() throws BetterCallFirstIsValidMethodException {
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < figures.size(); i++){
             System.out.println(i + ". "+ figures.get(i).toString());

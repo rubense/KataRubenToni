@@ -1,4 +1,4 @@
-package KataRubenToni.GameTwo.validator;
+package KataRubenToni.validator;
 
 import java.util.Scanner;
 

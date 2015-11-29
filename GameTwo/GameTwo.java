@@ -1,8 +1,7 @@
 package KataRubenToni.GameTwo;
 
-
-import KataRubenToni.GameTwo.validator.NumberValidator;
 import KataRubenToni.kata.Game;
+import KataRubenToni.validator.BetterCallFirstIsValidMethodException;
 
 /**
  * Created by toni on 26/11/15.
@@ -19,7 +18,7 @@ public class GameTwo implements Game {
     public void play() {
         try {
             gameFigures.play();
-        } catch (NumberValidator.BetterCallFirstIsValidMethodException e) {
+        } catch (BetterCallFirstIsValidMethodException e) {
             e.printStackTrace();
         }
     }

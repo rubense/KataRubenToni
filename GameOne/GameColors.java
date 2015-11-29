@@ -1,10 +1,10 @@
 package KataRubenToni.GameOne;
 
-import KataRubenToni.GameTwo.validator.NumberValidator;
-import KataRubenToni.GameTwo.validator.ValidatorManager;
+import KataRubenToni.validator.BetterCallFirstIsValidMethodException;
+import KataRubenToni.validator.NumberValidator;
+import KataRubenToni.validator.ValidatorManager;
 import KataRubenToni.kata.Game;
 
-import javax.xml.bind.SchemaOutputResolver;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -44,12 +44,12 @@ public class GameColors implements Game {
                 if (!correct) System.out.println("Error :( Try again");
                 else {
                     System.out.println("Great! :) You guess the color");
-                    System.out.print("¿Try again? y/n ");
+                    System.out.print("¿Try again? y/n: ");
                     Scanner sc2 = new Scanner(System.in);
-                    if (sc2.nextLine().equals("y")) correct = false;
+                    if (sc2.nextLine().toLowerCase().equals("y")) correct = false;
                 }
             }
-        } catch (NumberValidator.BetterCallFirstIsValidMethodException e) {
+        } catch (BetterCallFirstIsValidMethodException e) {
             e.printStackTrace();
         }
     }
