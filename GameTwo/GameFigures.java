@@ -28,14 +28,16 @@ public class GameFigures {
         this.figures.add(new Triangle(20, 20));
     }
 
-    public void play(){
+    public void play() throws NumberValidator.BetterCallFirstIsValidMethodException {
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < figures.size(); i++){
             System.out.println(i + ". "+ figures.get(i).toString());
         }
 
         System.out.print("What figure would you most like to play? (choose a number): ");
-        ValidatorManager.valid(numberValidator, "Please, put a number :D", sc);
+        numberValidator = (NumberValidator) ValidatorManager.valid(numberValidator, "Please, put a number :D", sc);
+        int number = numberValidator.getValid(); //get valid number
+
 
         String[][] canvas = figures.get(0).draw();
         draw(canvas);
