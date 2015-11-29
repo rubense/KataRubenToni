@@ -1,6 +1,7 @@
 package KataRubenToni.GameTwo;
 
 
+import KataRubenToni.GameTwo.validator.NumberValidator;
 import KataRubenToni.kata.Game;
 
 /**
@@ -16,7 +17,11 @@ public class GameTwo implements Game {
 
     @Override
     public void play() {
-        gameFigures.play();
+        try {
+            gameFigures.play();
+        } catch (NumberValidator.BetterCallFirstIsValidMethodException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
