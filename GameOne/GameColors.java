@@ -4,6 +4,7 @@ import KataRubenToni.GameTwo.validator.NumberValidator;
 import KataRubenToni.GameTwo.validator.ValidatorManager;
 import KataRubenToni.kata.Game;
 
+import javax.xml.bind.SchemaOutputResolver;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -35,11 +36,10 @@ public class GameColors implements Game {
         while (!correct) {
             System.out.print("Guess the color (choose a number) : ");
             Scanner sc1 = new Scanner(System.in);
-            ValidatorManager.valid(numberValidator, "Please, put a number :D", sc1);
-            String name = sc1.nextLine();
-            Color color = new Color(name);
-            int j = (int) (Math.random() * colors.size()) + 1;
-            if (colors.get(j).equals(color)) correct = true;
+            //ValidatorManager.valid(numberValidator, "Please, put a number :D", sc1);
+            int numColor = sc1.nextInt();
+            int numRandom = (int) (Math.random() * colors.size());
+            if (numColor == numRandom) correct = true;
             if (!correct) System.out.println("Error :( Try again");
             else {
                 System.out.println("Great! :) You guess the color");
