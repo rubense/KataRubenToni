@@ -26,6 +26,7 @@ public class YesNoValidator implements Validator<String, String> {
             case "no":
             case "n":
                 validData = entity;
+                isYes = false;
                 isValid = true;
                 break;
         }

@@ -35,13 +35,13 @@ public class GameColors implements Game {
             for (int i = 0; i < colors.size(); i++) {
                 System.out.println(i + ". " + colors.get(i).toString());
             }
+            int numRandom = (int) (Math.random() * colors.size());
             while (!correct) {
                 Scanner sc1 = new Scanner(System.in);
                 rangeNumberValidator = (RangeNumberValidator) ValidatorManager.valid(rangeNumberValidator,
                         "Guess the color (choose a number) : ",
                         "Please, put a number of a color :D", sc1);
                 int numColor = rangeNumberValidator.getValid();
-                int numRandom = (int) (Math.random() * colors.size());
                 if (numColor == numRandom) correct = true;
                 if (!correct) System.out.println("Error :( Try again");
                 else {
@@ -51,7 +51,9 @@ public class GameColors implements Game {
                             "¿Try again? yes/no: ",
                             "Please, only yes or no", sc2);
                     correct = !yesNoValidator.getIsYes();
+                    if(!correct) numRandom = (int) (Math.random() * colors.size());
                 }
+
             }
         } catch (BetterCallFirstIsValidMethodException e) {
             e.printStackTrace();
