@@ -1,10 +1,7 @@
 package KataRubenToni.GameOne;
 
-import KataRubenToni.validator.BetterCallFirstIsValidMethodException;
-import KataRubenToni.validator.NumberValidator;
-import KataRubenToni.validator.ValidatorManager;
+import KataRubenToni.validator.*;
 import KataRubenToni.kata.Game;
-import KataRubenToni.validator.YesNoValidator;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -13,15 +10,16 @@ import java.util.Scanner;
  * Created by Ruben on 26/11/2015.
  */
 public class GameColors implements Game {
-    private NumberValidator numberValidator;
+    //private NumberValidator numberValidator;
+    private RangeNumberValidator rangeNumberValidator;
     private YesNoValidator yesNoValidator;
     private ArrayList<Color> colors;
 
     public GameColors() {
         this.colors = new ArrayList<Color>();
-        this.numberValidator = new NumberValidator();
-        this.yesNoValidator = new YesNoValidator();
         loadColors();
+        this.rangeNumberValidator = new RangeNumberValidator(0,colors.size()-1);
+        this.yesNoValidator = new YesNoValidator();
     }
 
     public void loadColors() {
@@ -39,10 +37,10 @@ public class GameColors implements Game {
             }
             while (!correct) {
                 Scanner sc1 = new Scanner(System.in);
-                numberValidator = (NumberValidator) ValidatorManager.valid(numberValidator,
+                rangeNumberValidator = (RangeNumberValidator) ValidatorManager.valid(rangeNumberValidator,
                         "Guess the color (choose a number) : ",
-                        "Please, put a number :D", sc1);
-                int numColor = numberValidator.getValid();
+                        "Please, put a number of a color :D", sc1);
+                int numColor = rangeNumberValidator.getValid();
                 int numRandom = (int) (Math.random() * colors.size());
                 if (numColor == numRandom) correct = true;
                 if (!correct) System.out.println("Error :( Try again");

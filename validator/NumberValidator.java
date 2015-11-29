@@ -8,6 +8,10 @@ public class NumberValidator implements Validator<String, Integer> {
     private boolean hasCallFirstIsValidMethod = false;
     private int validData;
 
+    public void setHasCallFirstIsValidMethod(boolean hasCallFirstIsValidMethod) {
+        this.hasCallFirstIsValidMethod = hasCallFirstIsValidMethod;
+    }
+
     @Override
     public boolean isValid(String entity) {
         try{
