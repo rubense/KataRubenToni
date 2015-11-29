@@ -33,8 +33,9 @@ public class GameFigures {
             System.out.println(i + ". "+ figures.get(i).toString());
         }
 
-        System.out.print("What figure would you most like to play? (choose a number): ");
-        numberValidator = (NumberValidator) ValidatorManager.valid(numberValidator, "Please, put a number :D", sc);
+        numberValidator = (NumberValidator) ValidatorManager.valid(numberValidator,
+                "What figure would you most like to play? (choose a number): ",
+                "Please, put a number :D", sc);
         int number = numberValidator.getValid(); //get valid number
 
 

@@ -4,6 +4,7 @@ import KataRubenToni.validator.BetterCallFirstIsValidMethodException;
 import KataRubenToni.validator.NumberValidator;
 import KataRubenToni.validator.ValidatorManager;
 import KataRubenToni.kata.Game;
+import KataRubenToni.validator.YesNoValidator;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -13,11 +14,13 @@ import java.util.Scanner;
  */
 public class GameColors implements Game {
     private NumberValidator numberValidator;
+    private YesNoValidator yesNoValidator;
     private ArrayList<Color> colors;
 
     public GameColors() {
         this.colors = new ArrayList<Color>();
         this.numberValidator = new NumberValidator();
+        this.yesNoValidator = new YesNoValidator();
         loadColors();
     }
 
@@ -35,18 +38,21 @@ public class GameColors implements Game {
                 System.out.println(i + ". " + colors.get(i).toString());
             }
             while (!correct) {
-                System.out.print("Guess the color (choose a number) : ");
                 Scanner sc1 = new Scanner(System.in);
-                numberValidator = (NumberValidator) ValidatorManager.valid(numberValidator, "Please, put a number :D", sc1);
+                numberValidator = (NumberValidator) ValidatorManager.valid(numberValidator,
+                        "Guess the color (choose a number) : ",
+                        "Please, put a number :D", sc1);
                 int numColor = numberValidator.getValid();
                 int numRandom = (int) (Math.random() * colors.size());
                 if (numColor == numRandom) correct = true;
                 if (!correct) System.out.println("Error :( Try again");
                 else {
                     System.out.println("Great! :) You guess the color");
-                    System.out.print("¿Try again? y/n: ");
                     Scanner sc2 = new Scanner(System.in);
-                    if (sc2.nextLine().toLowerCase().equals("y")) correct = false;
+                    yesNoValidator = (YesNoValidator) ValidatorManager.valid(yesNoValidator,
+                            "¿Try again? yes/no: ",
+                            "Please, only yes or no", sc2);
+                    correct = !yesNoValidator.getIsYes();
                 }
             }
         } catch (BetterCallFirstIsValidMethodException e) {
