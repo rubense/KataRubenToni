@@ -1,16 +1,20 @@
 package KataRubenToni.CookingSocialNetwork;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Created by Ruben on 06/12/2015.
  */
-public class Recipe {
+public class Recipe implements Likeable{
     private String name;
+    private User user;
     private ArrayList<Picture> pictures;
     private ArrayList<Ingredient> ingredients;
-    private int time;
-    private ArrayList<String> description;
+    private Date time;
+    private String description;
     private ArrayList<Comment> comments;
     private ArrayList<Like> likes;
+
+
 }
