@@ -16,5 +16,10 @@ public class Recipe implements Likeable{
     private ArrayList<Comment> comments;
     private ArrayList<Like> likes;
 
-
+    public void like(User u){
+        likes.add(new Like(u, this));
+    }
+    public void unlike(User u){
+        likes.remove(new Like(u,this));
+    }
 }

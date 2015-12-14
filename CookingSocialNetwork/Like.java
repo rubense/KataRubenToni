@@ -10,9 +10,9 @@ public class Like {
     private Likeable liked;
     private Date time;
 
-    public Like(User u, Likeable l){
-        user = u;
-        liked = l;
-        time = 
+    public Like(User user, Likeable liked){
+        this.user = user;
+        this.liked = liked;
+        this.time = new Date();
     }
 }
