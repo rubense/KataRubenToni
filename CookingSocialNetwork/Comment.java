@@ -7,10 +7,15 @@ import java.util.ArrayList;
  */
 public class Comment implements Likeable{
     private User user;
-    private ArrayList<String> comment;
+    private String comment;
+    private ArrayList<Comment> comments;
     private ArrayList<Like> likes;
 
     public void like(User u){
-        likes.add(new Like(User u));
+        likes.add(new Like(u, this));
+    }
+
+    public void unlike(User u){
+        likes.remove(new Like(u, this));
     }
 }
