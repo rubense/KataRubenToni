@@ -15,4 +15,28 @@ public class Like {
         this.liked = liked;
         this.time = new Date();
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Likeable getLiked() {
+        return liked;
+    }
+
+    public void setLiked(Likeable liked) {
+        this.liked = liked;
+    }
+
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
+    }
 }

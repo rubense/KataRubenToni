@@ -13,6 +13,10 @@ public class RecipeControllerImp implements RecipeController{
 
     private RecipeDAO recipeDAO;
 
+    public RecipeControllerImp(RecipeDAO recipeDAO) {
+        this.recipeDAO = recipeDAO;
+    }
+
     @Override
     public List<Recipe> getRecipes() throws Exception {
         return recipeDAO.getList();
