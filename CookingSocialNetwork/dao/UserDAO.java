@@ -1,6 +1,6 @@
 package KataRubenToni.CookingSocialNetwork.dao;
 
-import KataRubenToni.CookingSocialNetwork.User;
+import KataRubenToni.CookingSocialNetwork.model.User;
 
 /**
  * Created by toni on 14/12/15.

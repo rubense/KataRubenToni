@@ -1,4 +1,4 @@
-package KataRubenToni.CookingSocialNetwork;
+package KataRubenToni.CookingSocialNetwork.model;
 
 import java.util.Date;
 

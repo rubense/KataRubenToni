@@ -1,4 +1,4 @@
-package KataRubenToni.CookingSocialNetwork;
+package KataRubenToni.CookingSocialNetwork.model;
 
 /**
  * Created by Ruben on 06/12/2015.

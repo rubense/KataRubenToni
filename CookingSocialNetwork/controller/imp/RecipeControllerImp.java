@@ -1,6 +1,6 @@
 package KataRubenToni.CookingSocialNetwork.controller.imp;
 
-import KataRubenToni.CookingSocialNetwork.Recipe;
+import KataRubenToni.CookingSocialNetwork.model.Recipe;
 import KataRubenToni.CookingSocialNetwork.controller.RecipeController;
 import KataRubenToni.CookingSocialNetwork.dao.RecipeDAO;
 
