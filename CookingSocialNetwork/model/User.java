@@ -28,7 +28,6 @@ public class User {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -36,7 +35,6 @@ public class User {
     public String getUserName() {
         return userName;
     }
-
     public void setUserName(String userName) {
         this.userName = userName;
     }
@@ -44,7 +42,6 @@ public class User {
     public String getPassword() {
         return password;
     }
-
     public void setPassword(String password) {
         this.password = password;
     }
@@ -52,7 +49,6 @@ public class User {
     public Picture getPicture() {
         return picture;
     }
-
     public void setPicture(Picture picture) {
         this.picture = picture;
     }
@@ -60,32 +56,25 @@ public class User {
     public String getDescription() {
         return description;
     }
-
     public void setDescription(String description) {
         this.description = description;
     }
 
+    public ArrayList<User> getFollowed() { return followed; }
+    public void setFollowed(ArrayList<User> followed) { this.followed = followed; }
 
-    public ArrayList<User> getFollowed() {
-        return followed;
-    }
+    public ArrayList<User> getFollowers() { return followers; }
+    public void setFollowers(ArrayList<User> followers) { this.followers = followers; }
 
-    public ArrayList<User> getFollowers() {
-        return followers;
-    }
-
-    public ArrayList<Recipe> getRecipes() {
-        return recipes;
-    }
+    public ArrayList<Recipe> getRecipes() { return recipes; }
+    public void setRecipes(ArrayList<Recipe> recipes) { this.recipes = recipes; }
 
 
     public void addRecipe(Recipe r) {
         this.recipes.add(r);
     }
 
-    public void removeRecipe(Recipe r) {
-        this.recipes.remove(r);
-    }
+    public void removeRecipe(Recipe r) { this.recipes.remove(r); }
 
     public boolean equals(Object o) {
         if (o instanceof User) {

@@ -21,7 +21,7 @@ public class RecipeDAOImp implements RecipeDAO {
     }
 
     @Override
-    public int getLikeCount(Recipe recipe) {
+    public int getLikeCount(Recipe entity) {
         return 0;
     }
 

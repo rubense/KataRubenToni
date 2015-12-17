@@ -19,7 +19,6 @@ public class Like {
     public User getUser() {
         return user;
     }
-
     public void setUser(User user) {
         this.user = user;
     }
@@ -27,7 +26,6 @@ public class Like {
     public Likeable getLiked() {
         return liked;
     }
-
     public void setLiked(Likeable liked) {
         this.liked = liked;
     }
@@ -35,7 +33,6 @@ public class Like {
     public Date getTime() {
         return time;
     }
-
     public void setTime(Date time) {
         this.time = time;
     }
