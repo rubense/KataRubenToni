@@ -17,18 +17,19 @@ public class UserDAOImp implements UserDAO {
 
     @Override
     public List<User> getList() throws Exception {
-        return null;
+        return new ArrayList<User>(this.userDB);
     }
 
     @Override
     public User create(User entity) throws Exception {
+        entity.setId(this.userDB.size()+1);
         userDB.add(entity);
         return entity;
     }
 
     @Override
     public void update(User entity) throws Exception {
-        //userDB.set(userDB.indexOf(enity), entity);
+        this.userDB.set(userDB.indexOf(entity), entity);
     }
 
     @Override
@@ -38,6 +39,6 @@ public class UserDAOImp implements UserDAO {
 
     @Override
     public User readById(User entity) throws Exception {
-        return null;
+        return this.userDB.get(this.userDB.indexOf(entity));
     }
 }

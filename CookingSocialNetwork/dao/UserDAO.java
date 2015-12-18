@@ -7,5 +7,4 @@ import KataRubenToni.CookingSocialNetwork.model.User;
  */
 public interface UserDAO extends DataAccessObject<User> {
     //Additional methods
-
 }

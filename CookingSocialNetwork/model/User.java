@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * Created by Ruben on 06/12/2015.
  */
 public class User {
+    private int id;
     private String name;
     private String userName;
     private String password;
@@ -23,6 +24,14 @@ public class User {
         this.followed = new ArrayList<User>();
         this.followers = new ArrayList<User>();
         this.recipes = new ArrayList<Recipe>();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -60,10 +69,16 @@ public class User {
         this.description = description;
     }
 
-    public ArrayList<User> getFollowed() { return new ArrayList<User>(followed); }
-    public void setFollowed(ArrayList<User> followed) { this.followed = followed; }
+    public ArrayList<User> getFollowed() {
+        return new ArrayList<User>(followed);
+    }
+    public void setFollowed(ArrayList<User> followed) {
+        this.followed = followed;
+    }
 
-    public ArrayList<User> getFollowers() { return new ArrayList<User>(followers); }
+    public ArrayList<User> getFollowers() {
+        return new ArrayList<User>(followers);
+    }
     public void setFollowers(ArrayList<User> followers) { this.followers = followers; }
 
     public ArrayList<Recipe> getRecipes() { return new ArrayList<Recipe>(recipes); }

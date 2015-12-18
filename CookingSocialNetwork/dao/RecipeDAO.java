@@ -8,5 +8,4 @@ import KataRubenToni.CookingSocialNetwork.model.Recipe;
 public interface RecipeDAO extends DataAccessObject<Recipe> {
     //Additional methods
     int getLikeCount(Recipe recipe);
-
 }
