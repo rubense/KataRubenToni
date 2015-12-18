@@ -60,13 +60,13 @@ public class User {
         this.description = description;
     }
 
-    public ArrayList<User> getFollowed() { return followed; }
+    public ArrayList<User> getFollowed() { return new ArrayList<User>(followed); }
     public void setFollowed(ArrayList<User> followed) { this.followed = followed; }
 
-    public ArrayList<User> getFollowers() { return followers; }
+    public ArrayList<User> getFollowers() { return new ArrayList<User>(followers); }
     public void setFollowers(ArrayList<User> followers) { this.followers = followers; }
 
-    public ArrayList<Recipe> getRecipes() { return recipes; }
+    public ArrayList<Recipe> getRecipes() { return new ArrayList<Recipe>(recipes); }
     public void setRecipes(ArrayList<Recipe> recipes) { this.recipes = recipes; }
 
 
