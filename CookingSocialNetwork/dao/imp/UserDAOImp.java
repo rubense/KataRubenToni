@@ -39,6 +39,8 @@ public class UserDAOImp implements UserDAO {
 
     @Override
     public User readById(User entity) throws Exception {
-        return this.userDB.get(this.userDB.indexOf(entity));
+        int index = this.userDB.indexOf(entity);
+        if (index < 0) return null;
+        return this.userDB.get(index);
     }
 }
